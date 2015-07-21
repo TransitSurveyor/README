@@ -1,6 +1,6 @@
 # TransitSurveyor Project Description
 
-The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains repositories required to build a surveying system used to collect boarding and deboarding locations of passengers using public transportation. This project was initially built for use in an Origin-Destination survey conducted by [TriMet](http://trimet.org/) in 2015. The code is split into three repositories as follows:
+The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains repositories required to build a surveying system that can be used to collect the boarding and alighting locations of passengers using public transit. This project was initially built for use in an Origin-Destination survey conducted by [TriMet](http://trimet.org/) in 2015. The code is split into three repositories as follows:
 
 + [MobileSurvey](https://github.com/TransitSurveyor/MobileSurveyor)
   + Android client for field collection

@@ -19,3 +19,15 @@ The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains 
 ## TODO
 
 The system was built using [TriMet's GIS data](http://developer.trimet.org/gis/). I would like to try and build the project with data from a different transit agency. This would help show how a different transit agency could use this.
+
+# IN PROGRESS
+
+## Building required data
+
+Using this app requires some input data be prebuilt. These inputs are derived using [GTFS](https://developers.google.com/transit/gtfs/) data. GTFS provides a specification transit agencies use to publish their data. You will need to build a database using [gtfsdb](https://github.com/OpenTransitTools/gtfsdb). Exports are then generated from this database.
+
+Follow the directions to build gtfsdb. You will then want to load a db using the is_spatial flag.
+
+```shell
+bin/gtfsdb-load --database_url postgresql://user:password@localhost:port/database --is_geospatial http://developer.trimet.org/schedule/gtfs.zip
+```

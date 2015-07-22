@@ -29,5 +29,14 @@ Using this app requires some input data be prebuilt. These inputs are derived us
 Follow the directions to build gtfsdb. You will then want to load a db using the is_spatial flag.
 
 ```shell
-bin/gtfsdb-load --database_url postgresql://user:password@localhost:port/database --is_geospatial http://developer.trimet.org/schedule/gtfs.zip
+# assuming you have created a spatially enabled database
+db=postgresql://user:password@localhost:port/database
+gtfs=http://developer.trimet.org/schedule/gtfs.zip
+
+git clone https://github.com/OpenTransitTools/gtfsdb.git
+cd gtfsdb
+virtualenv env
+env/bin/pip install psycopg2
+env/bin/python setup.py install
+env/bin/gtfsdb-load --database_url ${db} --is_geospatial ${gtfs}
 ```

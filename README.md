@@ -18,4 +18,4 @@ The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains 
   
 ## TODO
 
-The system was built using [TriMet's GIS data](http://developer.trimet.org/gis/). I would like to try and build the project with data from a different transit agency. This would help document how a different transit agency could use this.
+The system was built using [TriMet's GIS data](http://developer.trimet.org/gis/). I would like to try and build the project with data from a different transit agency. This would help show how a different transit agency could use this.

@@ -16,13 +16,11 @@ The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains 
   + **WARNING** This has has not been updated recently. It might be difficult to get this to build and work with an actual database. Use at your own risk **WARNING**
   
   
-## TODO
+## IN DEVELOPMENT (does not work)
 
-The system was built using [TriMet's GIS data](http://developer.trimet.org/gis/). I would like to try and build the project with data from a different transit agency. This would help show how a different transit agency could use this.
+The system is currently built using [TriMet's GIS data](http://developer.trimet.org/gis/). I would like to try and build the project with data from a different transit agency. This would help show different transit agencies how they could easily use it (assuming they generate GTFS schedule data).
 
-# IN PROGRESS
-
-## Building required data
+### Building input data from GTFS
 
 Using this app requires some input data be prebuilt. These inputs are derived using [GTFS](https://developers.google.com/transit/gtfs/) data. GTFS provides a specification transit agencies use to publish their data. You will need to build a database using [gtfsdb](https://github.com/OpenTransitTools/gtfsdb). Exports are then generated from this database.
 

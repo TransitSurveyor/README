@@ -1,5 +1,7 @@
 # TransitSurveyor Project Description
 
+Copyright © 2015 Jeffrey Meyers. This program is released under the "MIT License". Please see the file COPYING in this distribution for license terms.
+
 The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains repositories required to build a surveying system that can be used to collect the boarding and alighting locations of passengers using public transit. This project was initially built for use in an Origin-Destination survey conducted by [TriMet](http://trimet.org/) in 2015. The code is split into fours repositories as follows:
 
 + [MobileSurvey](https://github.com/TransitSurveyor/MobileSurveyor)

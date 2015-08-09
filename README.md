@@ -1,6 +1,6 @@
 # TransitSurveyor Project Description
 
-The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains repositories required to build a surveying system that can be used to collect the boarding and alighting locations of passengers using public transit. This project was initially built for use in an Origin-Destination survey conducted by [TriMet](http://trimet.org/) in 2015. The code is split into three repositories as follows:
+The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains repositories required to build a surveying system that can be used to collect the boarding and alighting locations of passengers using public transit. This project was initially built for use in an Origin-Destination survey conducted by [TriMet](http://trimet.org/) in 2015. The code is split into fours repositories as follows:
 
 + [MobileSurvey](https://github.com/TransitSurveyor/MobileSurveyor)
   + Android client for field collection
@@ -11,18 +11,21 @@ The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains 
   + uses PostgreSQL
   + deployed using NginX and uWSGI
   + repo contains setup script needed to build database with sample data and deploy using an Ubunutu server
++ [Data](https://github.com/TransitSurveyor/Data)
+  + contains sample source data required to build data dependencies
+  + a simple python script that generates the data inputs required by **API** and **MobileSurveyor** from the source data
 + [Dashboard](https://github.com/TransitSurveyor/Dashboard)
   + web app for viewing data
   + **WARNING** This has has not been updated recently. It might be difficult to get this to build and work with an actual database. Use at your own risk **WARNING**
   
   
-## IN DEVELOPMENT (does not work)
+## TODO
 
 The system is currently built using [TriMet's GIS data](http://developer.trimet.org/gis/). I would like to try and build the project with data from a different transit agency. This would help show different transit agencies how they could easily use it (assuming they generate GTFS schedule data).
 
-### Building input data from GTFS
+#### Building PostgreSQL database from GTFS
 
-Using this app requires some input data be prebuilt. These inputs are derived using [GTFS](https://developers.google.com/transit/gtfs/) data. GTFS provides a specification transit agencies use to publish their data. You will need to build a database using [gtfsdb](https://github.com/OpenTransitTools/gtfsdb). Exports are then generated from this database.
+GTFS provides a specification transit agencies use to publish their data. You will need to build a database using [gtfsdb](https://github.com/OpenTransitTools/gtfsdb). Exports could then be generated from this database.
 
 Follow the directions to build gtfsdb. You will then want to load a db using the is_spatial flag.
 

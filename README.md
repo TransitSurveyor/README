@@ -17,15 +17,14 @@ The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains 
   + contains sample source data required to build data dependencies
   + a simple python script that generates the data inputs required by **API** and **MobileSurveyor** from the source data
 + [Dashboard](https://github.com/TransitSurveyor/Dashboard)
+  + **WARNING** This repo is not really in a state that is usable  
   + web app for viewing data
-  + **WARNING** This has has not been updated recently. It might be difficult to get this to build and work with an actual database. Use at your own risk **WARNING**
   
-  
-## TODO
+### TODO
 
 The system is currently built using [TriMet's GIS data](http://developer.trimet.org/gis/). I would like to try and build the project with data from a different transit agency. This would help show different transit agencies how they could easily use it (assuming they generate GTFS schedule data).
 
-#### Building PostgreSQL database from GTFS
+##### Building PostgreSQL database from GTFS
 
 GTFS provides a specification transit agencies use to publish their data. You will need to build a database using [gtfsdb](https://github.com/OpenTransitTools/gtfsdb). Exports could then be generated from this database.
 

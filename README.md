@@ -10,11 +10,11 @@ The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains 
   + Android client for field collection
   + written in Java, preloaded with sample data from TriMet
 + [API](https://github.com/TransitSurveyor/API)
-  + server API for recieving data from clients
+  + server API for receiving data from clients
   + written in Python using Flask
   + uses PostgreSQL
   + deployed using NginX and uWSGI
-  + repo contains setup script needed to build database with sample data and deploy using an Ubunutu server
+  + repo contains setup script needed to build database with sample data and deploy using an Ubuntu server
 + [Data](https://github.com/TransitSurveyor/Data)
   + contains sample source data required to build data dependencies
   + a simple python script that generates the data inputs required by **API** and **MobileSurveyor** from the source data
@@ -24,6 +24,7 @@ The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains 
 
 ### High Level Setup
 
-1. Follow the build instructions in the `README` inside the [MobileSurveyor](https://github.com/TransitSurveyor/MobileSurveyor) repo. This will build an android app that provideds the user interface for collecting boarding and alighting locations.
+1. Follow the build instructions in the `README` inside the [MobileSurveyor](https://github.com/TransitSurveyor/MobileSurveyor) repo. This will build an android app that provides the user interface for collecting boarding and alighting locations.
 2. To setup the backend database and web services you will want to follow the `README` inside the [API](https://github.com/TransitSurveyor/API) repo. You will need to set up a VPS and run the setup shell script to build the database and deploy that application.
 3. Both repositories are loaded with sample data, but to generate your own follow the `README` instructions in the [Data](https://github.com/TransitSurveyor/Data) repo. You will construct your source inputs and run the build script. After that the outputs will need to be copied into the `data_inputs` folder in both the `MobileSurveyor` and `API` repos.
+

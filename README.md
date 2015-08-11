@@ -1,7 +1,6 @@
 # TransitSurveyor Project Description
 
-+ author: Jeffrey Meyers
-+ email: jeffrey.alan.meyers@gmail.com
+**author:** Jeffrey Meyers (jeffrey.alan.meyers@gmail.com)
 
 Copyright © 2015 Jeffrey Meyers. This program is released under the "MIT License". Please see the file COPYING in this distribution for license terms.
 

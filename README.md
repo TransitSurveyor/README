@@ -21,26 +21,9 @@ The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains 
 + [Dashboard](https://github.com/TransitSurveyor/Dashboard)
   + **WARNING** This repo is not really in a state that is usable  
   + web app for viewing data
-  
-### TODO
 
-The system is currently built using [TriMet's GIS data](http://developer.trimet.org/gis/). I would like to try and build the project with data from a different transit agency. This would help show different transit agencies how they could easily use it (assuming they generate GTFS schedule data).
+### High Level Setup
 
-##### Building PostgreSQL database from GTFS
-
-GTFS provides a specification transit agencies use to publish their data. You will need to build a database using [gtfsdb](https://github.com/OpenTransitTools/gtfsdb). Exports could then be generated from this database.
-
-Follow the directions to build gtfsdb. You will then want to load a db using the is_spatial flag.
-
-```shell
-# assuming you have created a spatially enabled database
-db=postgresql://user:password@localhost:port/database
-gtfs=http://developer.trimet.org/schedule/gtfs.zip
-
-git clone https://github.com/OpenTransitTools/gtfsdb.git
-cd gtfsdb
-virtualenv env
-env/bin/pip install psycopg2
-env/bin/python setup.py install
-env/bin/gtfsdb-load --database_url ${db} --is_geospatial ${gtfs}
-```
+1. Follow the build instructions in the `README` inside the [MobileSurveyor](https://github.com/TransitSurveyor/MobileSurveyor) repo. This will build an android app that provideds the user interface for collecting boarding and alighting locations.
+2. To setup the backend database and web services you will want to follow the `README` inside the [API](https://github.com/TransitSurveyor/API) repo. You will need to set up a VPS and run the setup shell script to build the database and deploy that application.
+3. Both repositories are loaded with sample data, but to generate your own follow the `README` instructions in the [Data](https://github.com/TransitSurveyor/Data) repo. You will construct your source inputs and run the build script. After that the outputs will need to be copied into the `data_inputs` folder in both the `MobileSurveyor` and `API` repos.

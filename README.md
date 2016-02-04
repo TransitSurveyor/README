@@ -16,13 +16,14 @@ The [TransitSurvey](https://github.com/TransitSurveyor) *Organization* contains 
   + written in Python using Flask
   + uses PostgreSQL
   + deployed using NginX and uWSGI
-  + repo contains setup script needed to build database with sample data and deploy using an Ubuntu server
 + [Data](https://github.com/TransitSurveyor/Data)
   + contains sample source data required to build data dependencies
   + a simple python script that generates the data inputs required by **API** and **MobileSurveyor** from the source data
 + [Dashboard](https://github.com/TransitSurveyor/Dashboard)
-  + **WARNING** This repo is not really in a state that is usable  
-  + web app for viewing data
+  + web app for viewing data (in progress)
++ [Deploy] (https://github.com/TransitSurveyor/Deploy)
+  + Vagrant + Puppet project for deploying [API](https://github.com/TransitSurveyor/API) with Postgres database
+
 
 ### High Level Setup
 
